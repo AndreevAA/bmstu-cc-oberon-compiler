@@ -1,0 +1,10 @@
+MODULE hello;
+VAR n, m, k, l:REAL;
+
+BEGIN
+    l := 10.0;
+    n := 1.5 + 2.5;
+    m := 0.8 + 1024.23;
+    k := 1.7 + 2.5 + 3.6;
+    RETURN k;
+END hello.
