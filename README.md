@@ -35,7 +35,7 @@ sh install.sh
 sh run.sh
 ```
 ## Тестирование 
-
+<img width="1232" alt="image" src="https://github.com/AndreevAA/bmstu-cc-oberon-compiler/assets/58621780/fe216124-f196-4d92-b9f6-018b04391f15">
 
 ## Общая информация
 [Документация Oberon-2](https://pm.vogu35.ru/oberon/o2rus.htm)
