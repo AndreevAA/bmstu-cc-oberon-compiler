@@ -1,0 +1,27 @@
+name: Build Project
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: docker/setup-buildx-action@v2
+      - name: Install antlr and llvm
+        run: |
+          sudo apt-get install antlr4
+          sudo apt-get install llvm
+      - name: Run 
+        run: |
+          cd oberon-compiler
+          chmod +x gradlew
+          ./gradlew clean
+          ./gradlew dependencies --write-locks
+          ./gradlew build --refresh-dependencies
+          ./gradlew build
